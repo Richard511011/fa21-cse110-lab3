@@ -1,28 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  color: #182b49;
 }
 /* This is a comment */
 body {
-  background-color: grey;
+  background-color: #c69214;
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .container {
   display: flex;
   flex-direction: column;
   margin: 50px;
   padding: 50px;
-  background-color: white;
+  background-color: #b6b1a9;
   border-radius: 10px;
+  color: #182b49;
 }
 img,
 video {
+  max-width: 90%;
+  max-height: 10%;
   font-size: 100pt;
   width: 70vw;
   position: relative;
   overflow: hidden;
 }
 li {
+  list-style-type: none;
   color: #000000;
   color: rgb(0, 0, 0);
   color: hsl(0, 0, 0);
@@ -30,8 +39,15 @@ li {
 }
 p {
   font-size: 1.3em;
+  margin: 5px 5px 5px 5px;
+  padding: 4px 4px 4px 4px;
+  display: block;
 }
 h2 {
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 15px;
   font-size: 1.4rem;
 }
 h3 {
@@ -42,4 +58,91 @@ h1 {
 }
 button {
   width: 500pt;
+}
+#form {
+  border-color: gold;
+  border-width: 1000px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+form {
+  border-style: double;
+  border-color: gold;
+  border-width: 5px;
+  width: 60%;
+  overflow: auto;
+}
+h1.title {
+  text-align: center;
+}
+.navbar {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  display: flex;
+  align-items: space-between;
+  margin-top: 10px;
+  z-index: 1;
+}
+.navbar ul {
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 2;
+  align-items: space-between;
+  flex-direction: row;
+}
+.navbar a {
+  margin: 0px;
+  background-color: #c69214;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+li :hover {
+  background-color: #00629b;
+  color: #c69214;
+}
+audio {
+  display: inline;
+}
+button :active {
+  color: gold;
+}
+.grid-test {
+  display: grid;
+  justify-self: self-end;
+  column-gap: 10px;
+  column-count: auto;
+}
+div div {
+  background-color: #b6b1a9;
+}
+form > label {
+  margin: 5px;
+}
+form > div {
+  margin: 5px;
+}
+input ~ input {
+  margin: 5px;
+}
+div + div {
+  margin: 5px;
+}
+img[src="./resources/Lab2_Meme.jpeg"] {
+  border-radius: 5px;
+}
+/* for phones */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  * {
+    max-width: 100%;
+  }
+  .navbar {
+    top: 5px;
+  }
 }
